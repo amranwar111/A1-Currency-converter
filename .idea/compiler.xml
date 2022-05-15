@@ -2,6 +2,10 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel target="1.8">
+      <module name="a1-currency-converter.app" target="11" />
+      <module name="A1-Currency-converter.buildSrc" target="11" />
+      <module name="a1-currency-converter.data" target="11" />
+      <module name="a1-currency-converter.utils" target="11" />
       <module name="base-modularized.app" target="11" />
       <module name="base-modularized.buildSrc" target="11" />
       <module name="base-modularized.data" target="11" />

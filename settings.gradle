@@ -1,4 +1,4 @@
-rootProject.name = "base-modularized"
+rootProject.name = "a1-currency-converter"
 include ':app'
 include ':data'
 include ':domain'

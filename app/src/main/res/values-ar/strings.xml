@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Base Modules</string>
+    <string name="app_name">Currency Converter</string>
     <string name="there_are_no_chats">لا توجد محادثات</string>
     <string name="text_ok">حسنا</string>
     <string name="text_cancel">إلغاء</string>

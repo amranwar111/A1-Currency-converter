@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Base Modules</string>
+    <string name="app_name">Currency Converter</string>
     <string name="there_are_no_chats">There are no chats</string>
     <string name="text_ok">OK</string>
     <string name="text_cancel">Cancel</string>
