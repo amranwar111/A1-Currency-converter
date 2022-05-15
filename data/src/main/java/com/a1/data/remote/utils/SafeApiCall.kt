@@ -39,16 +39,16 @@ fun <T> handleSuccess(response: T): DataState<T> {
                 DataState.Success(response)
             }
             FAIL -> {
-                DataState.Error(NetworkExceptions.CustomException(baseResponse.msg))
+                DataState.Error(NetworkExceptions.CustomException(baseResponse.msg!!))
             }
             NEED_ACTIVE -> {
-                DataState.Error(NetworkExceptions.NeedActiveException(baseResponse.msg))
+                DataState.Error(NetworkExceptions.NeedActiveException(baseResponse.msg!!))
             }
             UN_AUTH, BLOCKED -> {
                 DataState.Error(NetworkExceptions.AuthorizationException)
             }
             EXCEPTION -> {
-                DataState.Error(NetworkExceptions.CustomException(baseResponse.msg))
+                DataState.Error(NetworkExceptions.CustomException(baseResponse.msg!!))
             }
             else ->
                 DataState.Error(NetworkExceptions.UnknownException)

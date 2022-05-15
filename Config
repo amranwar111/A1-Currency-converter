@@ -1,2 +1,2 @@
-BaseUrl = https://controlpanel.aait-sa.com
+BaseUrl = http://data.fixer.io
 SocketPort = 4411
