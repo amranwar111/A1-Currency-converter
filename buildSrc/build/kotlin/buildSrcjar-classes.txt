@@ -1,0 +1,1 @@
+D:\AAIT\base-modularized\buildSrc\build\classes\kotlin\main\Build.class;D:\AAIT\base-modularized\buildSrc\build\classes\kotlin\main\Compilers.class;D:\AAIT\base-modularized\buildSrc\build\classes\kotlin\main\Dependencies.class;D:\AAIT\base-modularized\buildSrc\build\classes\kotlin\main\Versions.class

@@ -1,0 +1,20 @@
+plugins {
+    id 'java-library'
+    id 'org.jetbrains.kotlin.jvm'
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}
+
+dependencies {
+    implementation Dependencies.javaxAnnotation
+    implementation Dependencies.javaxInject
+
+    implementation Dependencies.coroutine
+    implementation Dependencies.coroutine_android
+
+    implementation Dependencies.moshi_kotlin
+    api Dependencies.json_org
+}
