@@ -6,11 +6,16 @@
     android:layout_height="match_parent"
     tools:context=".ui.cycles.home_cycle.fragment.home.HomeFragment">
 
-    <androidx.appcompat.widget.AppCompatSpinner
-        android:id="@+id/sp_from"
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_from"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/_24sdp"
+        android:drawableStart="@mipmap/ic_arrow_down"
+        android:gravity="center"
+        android:text="@string/eur"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_14ssp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/tv_arrow"
         app:layout_constraintStart_toStartOf="parent"
@@ -28,7 +33,7 @@
         android:textSize="@dimen/_18sdp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/sp_to"
-        app:layout_constraintStart_toEndOf="@id/sp_from"
+        app:layout_constraintStart_toEndOf="@id/tv_from"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.2" />
 
@@ -37,6 +42,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/_24sdp"
+        android:spinnerMode="dropdown"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/tv_arrow"
@@ -52,9 +58,9 @@
         android:hint="10"
         android:inputType="numberDecimal"
         android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="@id/sp_from"
-        app:layout_constraintStart_toStartOf="@id/sp_from"
-        app:layout_constraintTop_toBottomOf="@id/sp_from"
+        app:layout_constraintEnd_toEndOf="@id/tv_from"
+        app:layout_constraintStart_toStartOf="@id/tv_from"
+        app:layout_constraintTop_toBottomOf="@id/tv_from"
         tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
 
     <androidx.appcompat.widget.AppCompatEditText

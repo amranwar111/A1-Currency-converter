@@ -3,7 +3,9 @@ package com.a1.task.ui.cycles.home_cycle.fragment.home
 import androidx.lifecycle.viewModelScope
 import com.a1.domain.entities.BaseResponse
 import com.a1.domain.entities.CurrenciesResponse
+import com.a1.domain.entities.Operations
 import com.a1.domain.usecases.GetCurrenciesUseCase
+import com.a1.domain.usecases.InsertOperationUseCase
 import com.a1.domain.util.DataState
 import com.a1.task.ui.base.BaseViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -14,7 +16,8 @@ import javax.inject.Inject
 
 @HiltViewModel
 class HomeViewModel @Inject constructor(
-    private val getCurrenciesUseCase: GetCurrenciesUseCase
+    private val getCurrenciesUseCase: GetCurrenciesUseCase,
+    private val insetOperationUseCase: InsertOperationUseCase
 ) :
     BaseViewModel() {
 
@@ -29,6 +32,14 @@ class HomeViewModel @Inject constructor(
         viewModelScope.launch {
             getCurrenciesUseCase(key).collect {
                 _currenciesResponse.value = it
+            }
+        }
+    }
+
+    fun insertOperation(operations: Operations) {
+        _currenciesResponse.value = DataState.Idle
+        viewModelScope.launch {
+            insetOperationUseCase(operations).collect {
             }
         }
     }

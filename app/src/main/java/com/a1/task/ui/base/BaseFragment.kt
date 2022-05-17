@@ -44,11 +44,14 @@ abstract class BaseFragment<VB : ViewBinding>(private val inflate: Inflate<VB>) 
             onCreateBinding()
         }
         handleClicks()
+        afterCreateView()
 
         return binding.root
     }
 
     open fun onCreateBinding() {}
+
+    open fun afterCreateView() {}
 
     open fun handleClicks() {}
 

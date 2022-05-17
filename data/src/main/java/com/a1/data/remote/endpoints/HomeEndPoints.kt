@@ -9,5 +9,5 @@ interface HomeEndPoints {
     @GET("latest")
     suspend fun getCurrencies(
         @Query("access_key") accessKey: String,
-    ): BaseResponse<CurrenciesResponse>
+    ): CurrenciesResponse
 }

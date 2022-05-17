@@ -32,4 +32,6 @@
         this text is an example of a text that can be replaced To replace in the same space,
         it has been taken over</string>
     <string name="details" translatable="false">details</string>
+    <string name="eur" translatable="false">EUR</string>
+    <string name="aue" translatable="false">AUE</string>
 </resources>
