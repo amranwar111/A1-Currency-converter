@@ -34,4 +34,6 @@
     <string name="details" translatable="false">details</string>
     <string name="eur" translatable="false">EUR</string>
     <string name="aue" translatable="false">AUE</string>
+    <string name="from" translatable="false">from</string>
+    <string name="to" translatable="false">to</string>
 </resources>

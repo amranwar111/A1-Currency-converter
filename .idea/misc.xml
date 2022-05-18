@@ -11,7 +11,11 @@
         <entry key="..\:/Me/A1-Currency-converter/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1435" />
         <entry key="..\:/Me/A1-Currency-converter/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1435" />
         <entry key="..\:/Me/A1-Currency-converter/app/src/main/res/layout/fragment_home.xml" value="0.22314814814814815" />
+        <entry key="..\:/Me/A1-Currency-converter/app/src/main/res/layout/fragment_result.xml" value="0.25" />
+        <entry key="..\:/Me/A1-Currency-converter/app/src/main/res/layout/item__last_currency.xml" value="1.7142857142857142" />
         <entry key="..\:/Me/A1-Currency-converter/app/src/main/res/layout/item_currency.xml" value="0.25" />
+        <entry key="..\:/Me/A1-Currency-converter/app/src/main/res/layout/item_last_currency.xml" value="0.25" />
+        <entry key="..\:/Me/A1-Currency-converter/app/src/main/res/layout/item_operation.xml" value="0.25" />
         <entry key="..\:/Me/A1-Currency-converter/app/src/main/res/mipmap-anydpi-v26/ic_app_launcher_round.xml" value="0.1435" />
         <entry key="..\:/Me/A1-Currency-converter/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1435" />
         <entry key="..\:/Me/A1-Currency-converter/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1435" />

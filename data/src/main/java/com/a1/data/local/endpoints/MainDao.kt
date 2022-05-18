@@ -9,18 +9,10 @@ import com.a1.domain.entities.Operations
 @Dao
 interface MainDao {
 
-    @Query("SELECT * FROM operations WHERE :currentDate > 0 ")
+    // 259200000 is refers to 3 days in milliseconds
+    @Query("SELECT * FROM operations WHERE (:currentDate - date) < 259200000")
     fun getAllOperations(currentDate: Long): List<Operations>
-/*
-    @Query("SELECT * FROM user WHERE uid IN (:userIds)")
-    fun loadAllByIds(userIds: IntArray): List<User>
 
-*/
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertOperation(vararg operation: Operations)
-
-    /*   @Delete
-       fun delete(user: User)
-
-   */
 }

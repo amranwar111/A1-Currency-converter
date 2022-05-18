@@ -9,6 +9,20 @@
         android:id="@+id/homeFragment"
         android:name="com.a1.task.ui.cycles.home_cycle.fragment.home.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_resultFragment"
+            app:destination="@id/resultFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.a1.task.ui.cycles.home_cycle.fragment.result.ResultFragment"
+        android:label="fragment_result"
+        tools:layout="@layout/fragment_result">
+        <argument
+            android:name="lastCurrencies"
+            app:argType="string" />
+    </fragment>
 
 </navigation>

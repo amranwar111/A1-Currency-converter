@@ -30,12 +30,14 @@ android {
 
     buildTypes {
         debug {
-            buildConfigField("String", "BASE_URL","\"${myConfigProperties['BaseUrl']}\"")
-            buildConfigField("String", "SOCKET_PORT","\"${myConfigProperties['SocketPort']}\"")
+            buildConfigField("String", "BASE_URL", "\"${myConfigProperties['BaseUrl']}\"")
+            buildConfigField("String", "SOCKET_PORT", "\"${myConfigProperties['SocketPort']}\"")
+            buildConfigField("String", "API_KEY", "\"${myConfigProperties['ApiKey']}\"")
         }
         release {
-            buildConfigField("String", "BASE_URL","\"${myConfigProperties['BaseUrl']}\"")
-            buildConfigField("String", "SOCKET_PORT","\"${myConfigProperties['SocketPort']}\"")
+            buildConfigField("String", "BASE_URL", "\"${myConfigProperties['BaseUrl']}\"")
+            buildConfigField("String", "SOCKET_PORT", "\"${myConfigProperties['SocketPort']}\"")
+            buildConfigField("String", "API_KEY", "\"${myConfigProperties['ApiKey']}\"")
         }
     }
     kapt {
