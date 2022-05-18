@@ -1,5 +1,6 @@
 package com.a1.task.ui.cycles.home_cycle.fragment.result
 
+import android.graphics.Color
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.viewModels
@@ -7,6 +8,7 @@ import androidx.lifecycle.lifecycleScope
 import com.a1.domain.entities.CurrenciesResponse
 import com.a1.domain.entities.Operations
 import com.a1.domain.entities.SingleCurrencyModel
+import com.a1.task.R
 import com.a1.task.databinding.FragmentResultBinding
 import com.a1.task.ui.base.BaseFragment
 import com.a1.task.ui.cycles.home_cycle.fragment.result.adapter.LastCurrenciesAdapter
@@ -14,6 +16,8 @@ import com.a1.task.ui.cycles.home_cycle.fragment.result.adapter.OperationsAdapte
 import com.a1.task.ui.utils.applyCommonSideEffects
 import com.a1.utils.common.fromJson
 import dagger.hilt.android.AndroidEntryPoint
+import io.github.farshidroohi.ChartEntity
+import io.github.farshidroohi.LineChart
 import kotlinx.coroutines.flow.collect
 import java.util.*
 
@@ -40,8 +44,11 @@ class ResultFragment : BaseFragment<FragmentResultBinding>(FragmentResultBinding
         super.onViewCreated(view, savedInstanceState)
 
         viewModel.getOperations(getCurrentDate())
+
         setLastCurrencies()
+
     }
+
 
     private fun setLastCurrencies() {
         val listCurrencies = mutableListOf<SingleCurrencyModel>()
@@ -68,9 +75,32 @@ class ResultFragment : BaseFragment<FragmentResultBinding>(FragmentResultBinding
                 it.applyCommonSideEffects(this@ResultFragment, showSuccessToast = false) {
                     operationsAdapter.insertData(it.data as MutableList<Operations>)
                     binding.rvLastDays.adapter = operationsAdapter
+                    if ((it.data as MutableList<Operations>).isNotEmpty()) {
+                        binding.lineChart.visibility = View.VISIBLE
+                        intiChart(it.data as MutableList<Operations>)
+                    } else {
+                        binding.lineChart.visibility = View.GONE
+                    }
                 }
             }
         }
+    }
+
+    private fun intiChart(operations: MutableList<Operations>) {
+        val fromList = mutableListOf<Float>()
+        val toList = mutableListOf<Float>()
+        operations.forEach {
+            fromList.add(it.fromValue)
+            toList.add(it.toValue)
+        }
+        val firstChartEntity = ChartEntity(Color.WHITE, fromList.toFloatArray())
+        val secondChartEntity = ChartEntity(Color.YELLOW, toList.toFloatArray())
+
+        val list = ArrayList<ChartEntity>().apply {
+            add(firstChartEntity)
+            add(secondChartEntity)
+        }
+        binding.lineChart.setList(list)
     }
 
     override fun startObserver() {
