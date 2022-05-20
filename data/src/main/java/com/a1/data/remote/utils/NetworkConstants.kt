@@ -5,7 +5,7 @@ object NetworkConstants {
     const val BEARER = "Bearer "
     const val AUTHORIZATION = "Authorization"
     const val NETWORK_TIMEOUT = 60000L
-    const val API_VERSION = "/api/"
+    const val API_VERSION = "/fixer/"
 
     object Languages {
         const val ARABIC = "ar"
